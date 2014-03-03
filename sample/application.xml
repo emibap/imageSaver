@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="ImageSaver Sample" package="com.emibap.imagesaversample" version="1.0.0" company="Emibap - Emiliano Angelini" />
+	
+	<!-- output -->
+	<app file="ImageSaverSample" main="com.emibap.imagesaversample.ImageSaverSample" package="com.emibap.imagesaversample" path="bin" />
+	
+	<window background="#CCCCCC" fps="30" />
+ 	<window width="640" height="960" unless="mobile" />
+	<window orientation="portrait" vsync="false" antialiasing="0" if="cpp" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="imagesaver" />
+	
+	<assets path="assets" rename="assets" include="*" exclude="openfl.svg" />
+	
+	<!--<include path="../Extension" />-->
+	
+</project>

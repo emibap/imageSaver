@@ -1,0 +1,11 @@
+{
+  "name": "imagesaver",
+  "url": "http://github.com/emibap/imagesaver",
+  "license": "MIT",
+  "tags": [],
+  "description": "OpenFL extension to save a BitmapData instance to the camera roll",
+  "version": "0.0.1",
+  "releasenote": "Migrated from NME and split from a group of extensions",
+  "contributors": ["emibap"],
+  "dependencies": { "openfl": "1.1.1" }
+}
