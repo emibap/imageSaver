@@ -1,10 +1,11 @@
-**OpenFL ImageSaver extension**
+OpenFL ImageSaver extension
+=============================
 
 This is a native extension for haxe NME which allows to save a BitmapData to the camera roll, in JPEG format.
 (iOS and Android)
 
-**Usage**
-
+Installation
+------------
 You can install it directly from haxelib:
 	
 	haxelib install imagesaver
@@ -15,8 +16,9 @@ this sources and set its folder as the source using the following command:
 	
 	haxelib dev imagesaver path/to/your/downloaded/files
 
-
-Then reference the extension in your xml descriptor file:
+Usage
+------------
+Reference the extension in your xml descriptor file:
 	
 	<haxelib name="imagesaver" />
 
@@ -28,7 +30,8 @@ In your project, just call this static Method to use it:
 	-----------
 	bmd:nme.display.BitmapData - The desired BitmapData to be saved in the camera roll.
 
-**Running the test application**
+Running the test application
+------------
 
     cd sample
     lime build application.xml ios
@@ -36,14 +39,16 @@ In your project, just call this static Method to use it:
 	or 
     lime build application.xml android
 
-**Recompiling the extension**
+Recompiling the extension
+------------
 
     lime rebuild imagesaver ios
 	
 	or
     lime rebuild imagesaver android
 
-**License:**
+License
+------------
 
 This extension and example license:
 
