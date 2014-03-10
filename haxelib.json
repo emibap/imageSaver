@@ -4,8 +4,8 @@
   "license": "MIT",
   "tags": [],
   "description": "OpenFL extension to save a BitmapData instance to the camera roll",
-  "version": "0.0.1",
-  "releasenote": "Migrated from NME and split from a group of extensions",
+  "version": "0.0.2",
+  "releasenote": "Dependency fix",
   "contributors": ["emibap"],
-  "dependencies": { "openfl": "1.1.1" }
+  "dependencies": { "openfl": "" }
 }

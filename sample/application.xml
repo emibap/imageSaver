@@ -18,6 +18,4 @@
 	
 	<assets path="assets" rename="assets" include="*" exclude="openfl.svg" />
 	
-	<!--<include path="../Extension" />-->
-	
 </project>

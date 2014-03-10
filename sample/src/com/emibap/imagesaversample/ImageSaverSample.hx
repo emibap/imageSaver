@@ -62,8 +62,8 @@ class ImageSaverSample extends Sprite {
 		btn.graphics.drawRoundRect(0, 0, 300, 100, 12, 12);
 		btn.graphics.endFill();
 		
-		btn.x = w - btn.width - 20;
-		btn.y = 20;
+		btn.x = 20;
+		btn.y = 80;
 		
 		btn.addChild (labelTxt);
 		
