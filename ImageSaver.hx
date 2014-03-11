@@ -19,14 +19,19 @@ class ImageSaver {
 	
 	public static function saveImage(bmd:BitmapData):Void {
 		#if ios
-			var ba:ByteArray = bmd.getPixels(new Rectangle(0, 0, bmd.width, bmd.height));
-			cpp_call_save_image(ba.getData(), Std.int(bmd.width), Std.int(bmd.height));
+
+		var ba:ByteArray = bmd.getPixels(new Rectangle(0, 0, bmd.width, bmd.height));
+		cpp_call_save_image(ba.getData(), Std.int(bmd.width), Std.int(bmd.height));
+		
 		#elseif android
-			jni_call_save_image(getB64PngData(bmd));
+		
+		if (jni_call_save_image == null) jni_call_save_image = JNI.createStaticMethod ("org.haxe.extension.ImageSaver", "saveImage", "(Ljava/lang/String;)V");
+		jni_call_save_image(getB64PngData(bmd));
+		
 		#end	
 	}
 	
-	#if cpp
+	#if ios
 	private static var cpp_call_save_image = Lib.load ("imagesaver", "imagesaver_save_image", 3);
 	#end
 	
@@ -53,7 +58,8 @@ class ImageSaver {
 		return base64;
 	}
 	
-	private static var jni_call_save_image = JNI.createStaticMethod ("org.haxe.extension.ImageSaver", "saveImage", "(Ljava/lang/String;)V");
+	private static var jni_call_save_image:Dynamic;
+	
 	#end
 	
 	
